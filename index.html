@@ -11,10 +11,13 @@
     <div id="content"></div>
     <script>
         fetch("https://ci-swapi.herokuapp.com/com/api")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById('content').innerText = data;
+        .then(res => {
+            return res.json();//returning the promise
         })
+        .then(data => {
+            console.log(data);//return data in javascript format
+        })
+        //run
     </script>
 </body>
 </html>
